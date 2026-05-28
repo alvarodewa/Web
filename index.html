@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 💖</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<audio id="musik" loop>
+    <source src="https://files.catbox.moe/dkql9n.mp3">
+</audio>
+
+<div class="wrap">
+
+    <!-- PAGE 1 -->
+    <div class="card page active" id="p1">
+        <img src="https://files.catbox.moe/9370rx.jpg" class="profile">
+
+        <h1>💖 Hai Kamu</h1>
+
+        <input id="nama" placeholder="Nama kamu...">
+
+        <button onclick="start()">Mulai ❤️</button><br>
+
+        <button onclick="toggleMusic()" id="btnMusic">
+            ▶️ Play Musik
+        </button>
+
+        <div class="footer">
+            Developer: Alvaro | 6285137101818
+        </div>
+    </div>
+
+    <!-- LOADING -->
+    <div class="card page" id="load">
+        <h1>Tunggu...</h1>
+        <div class="loader"></div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="card page" id="p2">
+        <h1 id="txt"></h1>
+
+        <p>Kamu sayang aku ga? 🥺</p>
+
+        <button class="yes" onclick="jawab('ya')">
+            YA ❤️
+        </button>
+
+        <button class="no" onmouseover="kabur(this)">
+            GA 💔
+        </button>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="card page" id="p3">
+        <h1>💌 Dari Aku</h1>
+        <p id="msg1"></p>
+
+        <button onclick="next()">
+            Lanjut
+        </button>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="card page" id="p4">
+        <h1>🥺 Terakhir...</h1>
+
+        <p id="msg2"></p>
+
+        <button class="ok" onclick="kirimWA()">
+            Oke 💌
+        </button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
